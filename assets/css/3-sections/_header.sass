@@ -11,6 +11,7 @@ header
 		top: 0
 		right: 0
 		padding: 30px
+		height: 100%
 
 		.icon-menu
 			display: none
@@ -20,13 +21,15 @@ header
 				fill: $accent-dark
 
 		a
+			display: block
+			padding: 0 10px 20px 0
 			margin-left: 20px
-			color: rgba(54, 83, 84, 0.8)
+			color: $accent-dark
 			@extend %small-bold
 			font-weight: 600
 
 			&:hover
-				color: rgba(54, 83, 84, 1)
+				color: $accent
 
 	.headline-container		
 		max-width: 1000px

@@ -4,16 +4,16 @@ description: Software Engineer in the Making
 
 #About Section
 skills:
-- {name: Teaching, value: '4'}
+- {name: Teaching, value: '5'}
 - {name: UX Design, value: '7'}
-- {name: Visual Design, value: '7'}
 - {name: Communication, value: '8'}
 - {name: Programming, value: '8'}
 - {name: Organization, value: '9'}
 - {name: Learning, value: '9'}
+- {name: Leading, value: '10'}
 - {name: Planning, value: '10'}
 
 #Portfolio Section
 projects: 
-- {name: ACTION Tutoring Program, folder: 'proj-1'}
+- {name: ACTION Scheduling App, folder: 'proj-1'}
 - {name: Brick Breaker, folder: 'proj-2'}
