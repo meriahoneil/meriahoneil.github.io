@@ -1,0 +1,51 @@
+footer 
+	background: $bgcolor-light
+	height: 420px
+	+transition(all 500ms)
+
+	.iconContainer
+		+display(flex)
+		+align-items(center)
+		width: 440px
+		margin: 0px auto 50px
+
+		[class^="icon-"]
+			+size(50px)
+			margin: 0 30px
+			border-radius: 60px
+			background: $bgcolor
+			path
+				fill: $accent-dark
+			rect
+				fill: $accent-dark
+			polygon
+				fill: $accent-dark
+			+transition
+
+
+		[class^="icon-"]:hover 
+			path
+				fill: $accent
+
+			rect
+				fill: $accent
+
+			polygon
+				fill: $accent
+	.bar 
+		width: 250px
+		height: 0px
+		border-top: 4px solid $accent-dark
+		margin: 0px auto 30px
+
+	.biglink
+		display: block
+		text-align: center
+		font:
+			size: 60px
+			weight: 300
+		color: $accent-dark
+
+	.biglink:hover
+		color: $accent
+

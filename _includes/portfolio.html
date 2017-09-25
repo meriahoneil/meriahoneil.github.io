@@ -1,0 +1,25 @@
+<section class="darkbg portfolio-section">
+
+	<h3 id="portfolio"> Portfolio </h3>
+	
+	<div class="work-belt">
+		<div class="thumbnail-wrap">
+			<div class="thumbnail-container">
+				{% for project in site.data.settings.projects %}
+					<a href="" class="thumb-unit" data-folder="{{project.folder}}" style="background-image: url(/assets/img/portfolio/{{project.folder}}/thumb.jpg)">
+						<div class="thumb-overlay">
+							<strong>{{project.name}}</strong>
+						</div>
+					</a>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="project-wrap">
+			<div class="project-container">
+				<div class="project-return">{% include icons/icon-back.html %}</div>
+				<h4 class="project-title"></h4>
+				<div class="project-load"></div>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,86 @@
+header
+	height: 100vh
+	position: relative
+	width: 100%
+	display: flex
+	align-items: center
+	justify-content: space-around
+
+	nav
+		position: fixed
+		top: 0
+		right: 0
+		padding: 30px
+
+		.icon-menu
+			display: none
+			+size(40px)
+			cursor: pointer
+			path
+				fill: $accent-dark
+
+		a
+			margin-left: 20px
+			color: rgba(54, 83, 84, 0.8)
+			@extend %small-bold
+			font-weight: 600
+
+			&:hover
+				color: rgba(54, 83, 84, 1)
+
+	.headline-container		
+		max-width: 1000px
+		height: 260px
+		margin: auto
+		background-image: url(../img/banana-leaf.jpg)
+		background-attachment: fixed
+		background-position: center
+		background-size: 70%
+
+		@media screen and (max-width: 735px)
+			max-width: 500px
+			background-size: 100%
+
+		.center
+			margin: 10px
+			padding: 50px 20px 20px 20px
+			height: 170px
+			background: $bgcolor-light 
+
+			@media screen and (max-width: 735px)
+				margin: 10px
+				padding: 10px 10px 60px
+
+			h1
+				text-align: center
+				font:
+					size: 72px
+					weight: 700
+				text-transform: uppercase
+				letter-spacing: 0.05em
+				margin-top: 0
+				margin-bottom: 0
+				clear: both
+				vertical-align: center
+
+				span
+					background-image: url(../img/banana-leaf.jpg)
+					background-attachment: fixed
+					background-position: center
+					background-size: 70%
+					-webkit-text-fill-color: transparent
+					-webkit-background-clip: text
+					display: inline-block
+					padding: 0.2em 0.5em
+
+					@media screen and (max-width: 735px)
+						background-size: 100%
+
+			.tagline
+				color: rgba(54, 83, 84, 1)
+
+	.tagline
+		text-align: center
+		@extend %small-bold
+		letter-spacing: 0.05em
+		line-height: 1

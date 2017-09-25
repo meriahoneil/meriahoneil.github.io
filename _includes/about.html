@@ -1,0 +1,38 @@
+<section>
+	<h3 id="about">About Me</h3>
+
+	<div class="faceContainer">
+		<div class="faceImage">
+		</div>
+		<div class="icon-laptop">
+			{% include icons/icon-laptop.html %}
+		</div>
+		<div class="icon-brush">
+			{% include icons/icon-brush.html %}
+		</div>
+		<div class="icon-controller">
+			{% include icons/icon-controller.html %}
+		</div>
+		<div class="icon-book">
+			{% include icons/icon-book.html %}
+		</div>
+	</div>
+
+	<div class="about-text">
+		<p><strong>I recently graduated from the University of Pennsylvania and I'm excited to start a career in coding.</strong> I've had a hand in all parts of the development process from database management, to web design and love the idea of becoming a full stack developer. Most of my work has been done in Java (with a heavy emphasis on web design through HTML/CSS and plan old Javascript) but I've had some experience with Node.js, MeteorJs, and Ruby on Rails too. In my free time I love to draw and paint, play video games like Fallout and play with my cats, Lady and Marbles. If you're interesting in hiring a new software engineer or just want to learn more about my work, have a look around, I'm happy to have you.</p>
+	</div>
+
+	<div class="skillContainer">
+
+		{% for skill in site.data.settings.skills %}
+			<div class="skill-unit">
+				<div class="skill-label">{{skill.name}}</div>
+				<div class="skill-icon skill-{{skill.value}}">
+					{% for i in (1..10) %}
+						<span></span>
+					{% endfor %}
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+</section>

@@ -1,0 +1,104 @@
+.darkbg
+	background: $bgcolor
+	padding-bottom: 200px
+
+.portfolio-section
+	overflow-x: hidden
+
+.work-belt
+	width: 200%
+	position: relative
+	left: 0%
+	+transition(all 500ms)
+
+.thumbnail-wrap, .project-wrap
+	width: 50%
+	float: left
+
+.thumbnail-container
+	max-width: 700px
+	margin: 0px auto
+	+clearfix
+
+	.thumb-unit
+		display: block
+		width: 33%
+		float: left
+		position: relative
+		padding-top: 20%
+
+		@media screen and (max-width: 760px)
+			width: 50%
+			padding-top: 26%
+
+		background:
+			position: center center
+			repeat: no-repeat
+			size: cover
+
+		.thumb-overlay
+			+position(absolute, 0% 0px null 0px)
+			height: 100%
+			background: fade-out($accent, 0.05)
+			text-align: center
+			+display(flex)
+			+align-items(center)
+			+justify-content(space-around)
+			opacity: 0
+
+			strong
+				display: block
+				padding: 0px 20px
+				color: white
+				font-weight: 300
+				text-transform: uppercase
+				font-size: 20px
+				line-height: 1.2
+
+		&:hover 
+			z-index: 2
+
+			.thumb-overlay
+				@extend %animation
+				opacity: 1
+
+.project-container
+	display: none
+	max-width: 600px
+	margin: 0px auto
+	position: relative
+
+	h4
+		margin: 0 0 20px
+
+	img
+		max-width: 100%
+		margin-bottom: 20px
+
+	.project-return
+		cursor: pointer
+		opacity: 0.8
+		+position(absolute, 0 null null -60px)
+		radius: 50%
+
+		svg
+			+size(35px)
+
+		path
+			fill: rgba(0, 0, 0, 0.4)
+
+		&:hover
+			path 
+				fill: rgba(0, 0, 0, 0.8)
+
+
+@media (max-width: 740px)
+	.project-container
+
+		.project-return
+			left: 4px
+
+		h4
+			margin-left: 60px
+
+
